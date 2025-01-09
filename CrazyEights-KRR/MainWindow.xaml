@@ -1,0 +1,50 @@
+﻿<Window x:Class="CrazyEights_KRR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrazyEights_KRR"
+        mc:Ignorable="d"
+        Title="Crazy Eights" Height="460" Width="450
+        " ResizeMode="NoResize">
+    <Grid>
+        <Grid HorizontalAlignment="Center" Height="185" VerticalAlignment="Top" Width="430" Margin="0,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="311*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="p1Display" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="0" Margin="3,0,3,0"/>
+            <Label x:Name="p2Display" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="1" Margin="3,0,3,0"/>
+            <Label x:Name="p3Display" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="2" Margin="3,0,3,0"/>
+            <Label x:Name="p4Display" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="3" Margin="3,0,3,0"/>
+            <Label x:Name="p5Display" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="4" Margin="3,0,3,0"/>
+            <Label x:Name="p6Display" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="5" Margin="3,0,3,0"/>
+            <Label x:Name="p1Score" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="0" Margin="389,0,3,0"/>
+            <Label x:Name="p2Score" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="1" Margin="389,0,3,0"/>
+            <Label x:Name="p3Score" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="2" Margin="389,0,3,0"/>
+            <Label x:Name="p4Score" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="3" Margin="389,0,3,0"/>
+            <Label x:Name="p5Score" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="4" Margin="389,0,3,0"/>
+            <Label x:Name="p6Score" Content="N/A" Height="24" VerticalAlignment="Center" Grid.Row="5" Margin="389,0,3,0"/>
+        </Grid>
+        <Label x:Name="PoolCardVis" Content="Label" HorizontalAlignment="Left" Margin="107,305,0,0" VerticalAlignment="Top" Width="99" FontSize="15"/>
+        <Label x:Name="PoolAmountVis" Content="Label" HorizontalAlignment="Left" Margin="107,335,0,0" VerticalAlignment="Top" Width="99" FontSize="15"/>
+        <Label x:Name="DeckAmountVis" Content="Label" HorizontalAlignment="Left" Margin="107,364,0,0" VerticalAlignment="Top" Width="99" FontSize="15"/>
+        <ListBox x:Name="CurPlayerMovesVis" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,200,349,10"/>
+        <Button x:Name="PlayCard" Content="PLAY" Height="50" Margin="106,200,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Click="PlayCard_Click"/>
+        <Button x:Name="DrawCard" Content="DRAW" HorizontalAlignment="Left" Height="50" Margin="106,255,0,0" VerticalAlignment="Top" Width="100" Click="DrawCard_Click"/>
+        <ListView x:Name="LogVis" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="211,200,10,10" FontSize="10" Grid.ColumnSpan="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="SuitIndicator" Content="" HorizontalAlignment="Left" Margin="107,394,0,0" VerticalAlignment="Top" Width="99" FontSize="15"/>
+
+    </Grid>
+</Window>
